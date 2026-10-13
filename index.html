@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marius Casamian · Data and Markets</title>
+<meta name="description" content="Marius Casamian: data pipelines, BI and markets analysis. Projects, results and contact.">
+<style>
+  :root {
+    --bg: #f7f6f3; --surface: #ffffff; --border: #e4e2dc;
+    --text: #141413; --text-2: #55534e; --muted: #8b8984;
+    --accent: #1f4e8c; --accent-soft: #e8eef8; --tag: #f0efea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121211; --surface: #1b1b1a; --border: #2f2f2c;
+      --text: #f4f3ee; --text-2: #c5c3bb; --muted: #8f8d86;
+      --accent: #7fb0f0; --accent-soft: #1c2a3d; --tag: #262624;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 920px; margin: 0 auto; padding: 56px 16px 64px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header h1 { font-size: 40px; line-height: 1.1; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .tagline { font-size: 19px; color: var(--text-2); margin: 0 0 18px; max-width: 680px; }
+  .badge { display: inline-block; background: var(--accent-soft); color: var(--accent);
+           border-radius: 999px; padding: 4px 12px; font-size: 14px; font-weight: 600; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 18px; font-size: 15px; }
+  .stack { color: var(--muted); font-size: 14px; margin-top: 14px; }
+  section { margin-top: 56px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 16px; }
+  .project { background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+             padding: 22px; margin-bottom: 16px; display: grid; grid-template-columns: 1fr 260px; gap: 22px; }
+  .project.noimg { grid-template-columns: 1fr; }
+  @media (max-width: 760px) { .project { grid-template-columns: 1fr; } }
+  .project h3 { margin: 0 0 6px; font-size: 20px; }
+  .project p { margin: 0 0 10px; color: var(--text-2); }
+  .result { font-weight: 600; color: var(--text); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 12px; }
+  .tags span { background: var(--tag); border-radius: 6px; padding: 2px 8px; font-size: 13px; color: var(--text-2); }
+  .project img { width: 100%; border-radius: 8px; border: 1px solid var(--border); background: #fff; align-self: center; }
+  .more a { margin-right: 14px; font-size: 15px; font-weight: 600; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+  .card h3 { margin: 0 0 4px; font-size: 17px; }
+  .card .meta { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+  .card p { margin: 0; color: var(--text-2); font-size: 15px; }
+  ul.compact { margin: 0; padding-left: 18px; color: var(--text-2); }
+  ul.compact li { margin-bottom: 6px; }
+  footer { margin-top: 56px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Marius Casamian</h1>
+    <p class="tagline">I build data pipelines end to end, from API collection to models, dashboards
+      and decisions. Bachelor's degree in Artificial Intelligence, operations experience at an
+      international airport, a strong interest in markets.</p>
+    <span class="badge">Open to VIE positions from January 2027 · data, BI, markets</span>
+    <div class="links">
+      <a href="https://github.com/MariusEtudiant">GitHub</a>
+      <a href="https://www.linkedin.com/in/marius-casamian-a03b7926a">LinkedIn</a>
+      <a href="mailto:marius.casamian06@gmail.com">marius.casamian06@gmail.com</a>
+      <span style="color:var(--muted)">Nice, France · French, English, Spanish</span>
+    </div>
+    <div class="stack">Python · SQL · dbt · DuckDB · Power BI (DAX) · FastAPI · Excel · Git and GitHub Actions · Java</div>
+  </header>
+
+  <section>
+    <h2>Selected projects</h2>
+
+    <article class="project">
+      <div>
+        <h3>Hedging a crypto OTC clip</h3>
+        <p>What it costs to hedge a 1–10 M$ BTC or ETH block on Binance, Coinbase and Kraken, and
+          when. Live order book snapshots every minute, six months of 1-minute history, and an
+          Excel pricer with live formulas.</p>
+        <p class="result">Routing a 5 M$ clip across three venues halves its cost; New York open is
+          the only real liquidity peak; each venue follows its home time zone.</p>
+        <div class="tags"><span>Python</span><span>Excel</span><span>REST APIs</span><span>Market microstructure</span></div>
+        <div class="more"><a href="https://github.com/MariusEtudiant/otc-execution-cost">Code and findings →</a></div>
+      </div>
+      <img src="https://raw.githubusercontent.com/MariusEtudiant/otc-execution-cost/main/reports/liquidity_clock.png"
+           alt="Median traded volume per minute by hour, weekdays and weekends, BTC and ETH" loading="lazy">
+    </article>
+
+    <article class="project">
+      <div>
+        <h3>Fleet data product: YEGO e-scooters</h3>
+        <p>Nice and Barcelona fleets from the operator's public API: dbt models with 31 data tests, a
+          star schema, a Power BI semantic model with DAX measures, a FastAPI service with a web
+          map, and CI on every push.</p>
+        <p class="result">Battery swaps happen after the evening demand peak: 88% of them between
+          20h and 2h in Nice.</p>
+        <div class="tags"><span>dbt</span><span>DuckDB</span><span>Power BI</span><span>FastAPI</span><span>GitHub Actions</span></div>
+        <div class="more"><a href="https://github.com/MariusEtudiant/yego-nice-ops">Code and findings →</a></div>
+      </div>
+      <img src="https://raw.githubusercontent.com/MariusEtudiant/yego-nice-ops/master/docs/web_app.jpg"
+           alt="Web app with KPIs, a zone map of Nice and the fleet status by hour" loading="lazy">
+    </article>
+
+    <article class="project noimg">
+      <div>
+        <h3>PRC Data Challenge 2026 · EUROCONTROL &amp; OpenSky</h3>
+        <p>Predicting taxi-out times at ten European airports from 4 million flight movements,
+          weather and ADS-B surface tracks. The take-off time is known, so the task is to rebuild
+          the off-block time: a two-stage model detects schedule copies, then regresses the rest.</p>
+        <p class="result">96th of 242 teams, RMSE 282 s.</p>
+        <div class="tags"><span>Python</span><span>LightGBM</span><span>ADS-B</span><span>Large datasets</span></div>
+        <div class="more"><a href="https://github.com/MariusEtudiant/prc-data-challenge-2026">Code →</a></div>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <div class="card">
+        <h3><a href="https://github.com/MariusEtudiant/Multi-Agent-Traffic-Simulation">Multi-agent traffic simulation</a></h3>
+        <div class="meta">Java · JavaFX · TweetyProject</div>
+        <p>BDI vehicles, traffic lights controlled by a Markov decision process solved by value
+          iteration, and transport-mode choice by Dung argumentation.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/MariusEtudiant/RobotiqueRL">Q-learning vs the exact optimum</a></h3>
+        <div class="meta">Python · reinforcement learning</div>
+        <p>A Q-learning agent checked cell by cell against value iteration: it reaches the base from
+          99% of cells, but follows an optimal path from only 75%.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/MariusEtudiant/African-Credit-Scoring-Challenge">Loan default prediction</a></h3>
+        <div class="meta">LightGBM · Optuna · imbalanced data</div>
+        <p>1.8% defaults: F1 of 0.89 on validation, 0.71 on the leaderboard, where a new country
+          appears. Resampling did not help.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://github.com/MariusEtudiant/Spam-Detector">SMS spam detection</a></h3>
+        <div class="meta">NLP · scikit-learn · XGBoost</div>
+        <p>Seven classifiers compared on 5,572 messages; a linear SVM leads with an F1 of 0.95 and a
+          ROC AUC of 0.997.</p>
+      </div>
+    </div>
+    <p style="color:var(--muted); font-size:15px; margin-top:14px">Also:
+      <a href="https://github.com/MariusEtudiant/Transformer-RNN-MachineTranslation">English–French Transformer</a> ·
+      <a href="https://github.com/MariusEtudiant/ML-Duplicate-Bug-Report-Ellipse">duplicate bug reports</a> ·
+      <a href="https://github.com/MariusEtudiant/Prediction-Loan-Approval">loan approval</a> ·
+      <a href="https://numer.ai/~m1000">Numerai tournament</a></p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>Nice Côte d'Azur Airport · Operations control centre</h3>
+        <div class="meta">Operational Resource Manager · Jan.–Apr. 2026</div>
+        <p>Real-time resource allocation under delays and disruptions, coordination with the control
+          tower, consistency checks on data from several systems.</p>
+      </div>
+      <div class="card">
+        <h3>Crédit Coopératif</h3>
+        <div class="meta">Banking Assistant · 2023</div>
+        <p>Entry and verification of financial information in client files, under strict procedures.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <ul class="compact">
+      <li><strong>Bachelor's degree in Artificial Intelligence</strong>, Université Côte d'Azur, 2022–2025:
+        statistics, databases and SQL, machine learning, multi-agent systems.</li>
+      <li><strong>Bachelor's degree in Mathematics</strong> (2nd year), Université Côte d'Azur, 2025–2026.</li>
+    </ul>
+  </section>
+
+  <footer>Marius Casamian · Nice, France</footer>
+</main>
+</body>
+</html>
